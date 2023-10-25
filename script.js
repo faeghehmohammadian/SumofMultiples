@@ -1,7 +1,17 @@
 
 const limitinput=document.getElementById("limit");
-const magicalinput1=document.getElementById("magical1");
-const magicalinput2=document.getElementById("magical2");
+const maginput=document.getElementById("magical");
+var addBtn = document.getElementById("addbtn");
+var display = document.getElementById("options-list");
+var inputArr = [];
+addBtn.addEventListener("click", addAnddisplay);
+
+function addAnddisplay() {
+
+    inputArr.push(maginput.value);
+
+    display.textContent = inputArr;   
+}
 
 function sum (factors, limit) {
     const uniqueMultiples = new Set();
@@ -21,6 +31,6 @@ const btn = document
             .getElementById("btn")
             .addEventListener("click", function () {
                 document.getElementById("output").textContent =
-                    sum([parseInt(magicalinput1.value, 10),parseInt(magicalinput2.value, 10)],parseInt(limitinput.value, 10));
+                    sum(inputArr,parseInt(limitinput.value, 10));
                 // console.log(sum(magicalitem,limit));
             });

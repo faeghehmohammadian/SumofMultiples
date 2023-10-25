@@ -6,15 +6,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <label>completed level:</label>
-    <input id="limit" type="text" value=""><br>
-    <label >magical item1:</label>
-    <input id="magical1" type="text" value=""><br>
-    <label >magical item2:</label>
-    <input id="magical2" type="text" value=""><br><br>
-    <label for="output">The energy points:</label>
-    <div id="output"></div>
-    <button id="btn">Ok</button>
+    <div class="main">
+        <label>completed level:</label>
+        <input id="limit" type="text" value=""><br>
+        <label >magical items:</label>
+        <input id="magical" type="text" value="">
+        <br>
+        <button id="addbtn">Add</button><br>
+        <h2>Your Options</h2>
+        <div id="options-list"></div><br>
+
+        <label for="output">The energy points:</label>
+        <div id="output"></div>
+        <button id="btn">Ok</button>
+    </div>
     
     <script src="script.js"></script>
 </body>
